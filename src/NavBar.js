@@ -7,13 +7,7 @@ const NavBar = (props) => {
         <ul>
             <li><Link to="/">Home</Link></li>
             <li><Link to="/about/">About</Link></li>
-            <li><Link to="/cats/">Cats</Link>
-                <ul>
-                    <li><Link to="/cats/oakly">Oakly</Link></li>
-                    <li><Link to="/cats/milla">Milla</Link></li>
-                    <li><Link to="/cats/oreo">Oreo</Link></li>
-                </ul>
-            </li>
+            <li><Link to="/cats/">Cats</Link></li>
         </ul>
     );
 };
