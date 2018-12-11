@@ -1,17 +1,14 @@
 import React, { Component } from 'react';
 import './App.css';
-
-import {
-  BrowserRouter as Router,
-  Route,
-  Link
-} from "react-router-dom";
+import { BrowserRouter as Router, Route, } from "react-router-dom";
 
 import NavBar from './NavBar.js';
 import Home from './Home.js';
 import About from './About.js';
 import Cats from './Cats.js';
 import OneCat from './OneCat.js';
+import Dogs from './Dogs.js';
+import OneDog from './OneDog.js';
 
 class App extends Component {
 
@@ -24,6 +21,12 @@ class App extends Component {
         'Milla': ['cheese', 'string'],
         'Whisper': ['balls', 'puppy', 'icicles'],
         'Neo': ['ice', 'mice']
+      },
+      dogToys: {
+        'Skyler': ['balls', 'shoes'],
+        'Wingnut': ['cheese', 'bones', 'cats'],
+        'Killah': ['shoes', 'children'],
+        'Neon': ['rope', 'squirrels']
       }
     }
   }
@@ -42,8 +45,14 @@ class App extends Component {
               return <Cats catList={Object.keys(this.state.catToys)} {...props}/>
             }}
           />
+          <Route path="/dogs/" render={(props) => {
+              return <Dogs dogList={Object.keys(this.state.dogToys)} {...props}/>
+            }}/>
           <Route path="/cats/:catName" render={(props) => {
               return <OneCat toys={this.state.catToys} {...props} />
+            }} />
+          <Route path="/dogs/:dogName" render={(props) => {
+              return <OneDog toys={this.state.dogToys} {...props} />
             }} />
 
         </div>

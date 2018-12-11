@@ -1,23 +1,23 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-const Cats = (props) => {
-    const catListItems = props.catList.map((catName, i) => {
+const Dogs = (props) => {
+    const dogListItems = props.dogList.map((dogName, i) => {
         return (
             <li key={i}>
-                <Link to={`/cats/${catName}`}>{catName}</Link>
+                <Link to={`/dogs/${dogName}`}>{dogName}</Link>
             </li>
         )
     })
 
     return (
         <div>
-            <h1>Cats</h1>
+            <h1>Dogs</h1>
             <ul>
-                {catListItems}
+                {dogListItems}
             </ul>
         </div>
     );
 };
 
-export default Cats;
+export default Dogs;
