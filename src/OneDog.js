@@ -7,7 +7,7 @@ const OneDog = (props) => {
     const myToys = allToys[dogName];
     return (
         <div>
-            <h2>{dogName}</h2>
+            <h2>{dogName}'s Toys:</h2>
             <ul>
                 {myToys.map((toy, i) => {
                     return <li key={i}>{toy}</li>

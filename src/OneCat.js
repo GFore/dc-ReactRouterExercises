@@ -7,7 +7,7 @@ const OneCat = (props) => {
     const myToys = allToys[catName];
     return (
         <div>
-            <h2>{catName}</h2>
+            <h2>{catName}'s Toys</h2>
             <ul>
                 {myToys.map((toy, i) => {
                     return <li key={i}>{toy}</li>
